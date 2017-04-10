@@ -69,7 +69,7 @@ public class Main {
                 else {
                     if (N>0){
                         for (int i=0;i<N;i++){
-                            Point b = new Point((int)(Math.random()*frame.getWidth()-250), (int)(Math.random()*frame.getHeight()));
+                            Point b = new Point((int)(Math.random()*(frame.getWidth()-250)), (int)(Math.random()*frame.getHeight()));
                             points.add(b);
                             b.setBounds(b.x,b.y,b.x+3,b.y+3);
                             pointpane.add(b);
