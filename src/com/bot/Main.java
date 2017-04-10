@@ -12,13 +12,14 @@ import java.util.Scanner;
 public class Main {
     private static ArrayList<Point> points = new ArrayList<Point>();
     public static void createGUI() {
-        JFrame frame = new JFrame("Testframe");
+        final JFrame frame = new JFrame("Testframe");
 	    frame.setPreferredSize(new Dimension(700,700));
 	    JPanel panel = new JPanel(new BorderLayout());
         Panel butPanel = new Panel();
         butPanel.setLayout(null);
         butPanel.setPreferredSize(new Dimension(250,700));
-        final JPanel pointpane   = new JPanel(null);
+        final Panel pointpane   = new Panel();
+        pointpane.setLayout(null);
         pointpane.setPreferredSize(new Dimension(350,700));
 
 	    JLabel addPointwithCoords = new JLabel("Добавить точку по координатам");
@@ -68,7 +69,7 @@ public class Main {
                 else {
                     if (N>0){
                         for (int i=0;i<N;i++){
-                            Point b = new Point((int)(Math.random()*350), (int)(Math.random()*700));
+                            Point b = new Point((int)(Math.random()*frame.getWidth()-250), (int)(Math.random()*frame.getHeight()));
                             points.add(b);
                             b.setBounds(b.x,b.y,b.x+3,b.y+3);
                             pointpane.add(b);
