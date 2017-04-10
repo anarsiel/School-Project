@@ -20,7 +20,7 @@ public class Main {
         butPanel.setPreferredSize(new Dimension(250,700));
         final Panel pointpane   = new Panel();
         pointpane.setLayout(null);
-        pointpane.setPreferredSize(new Dimension(350,700));
+        //pointpane.setPreferredSize(new Dimension(350,700));
 
 	    JLabel addPointwithCoords = new JLabel("Добавить точку по координатам");
 	    addPointwithCoords.setBounds(2,2,300,25);
@@ -98,7 +98,7 @@ public class Main {
         });
         button2.setBounds(2,150,160,40);
         butPanel.add(button2);
-        panel.add(pointpane,BorderLayout.WEST);
+        panel.add(pointpane,BorderLayout.CENTER);
         panel.add(butPanel,BorderLayout.EAST);
         frame.getContentPane().add(panel);
         frame.pack();
