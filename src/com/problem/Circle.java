@@ -1,25 +1,29 @@
 package com.problem;
 
+import com.bot.Point;
+
+import java.util.ArrayList;
+
 public class Circle {
     Point c; // точка, являющаяся центром окружности
     int r; // радиус окружности
 
-    Circle() {}
+    public Circle() {}
 
-    Circle(Point c, int r) {
+    public Circle(Point c, int r) {
         this.c = c.copy();
         this.r = r;
     } // конструктор, создающий окружность заданного радиуса с центром в заданной точке
 
-    Circle copy() {
+    public Circle copy() {
         return new Circle(c, r);
     } // метод, возвращающий копию объекта
 
-    int countPointsInCircle(Point[] arr) {
+    public int countPointsInCircle(ArrayList<Point> arr) {
         int cnt = 0;
 
-        for (int i = 0; i < arr.length; i++) { // переберем все точки множества
-            Point current = arr[i];
+        for (int i = 0; i < arr.size(); i++) { // переберем все точки множества
+            Point current = arr.get(i);
 
             if (current.minus(c).len2() <= r * r) { // проверка, лежит ли данная точка внутри окружности
                 cnt++;                              // (сравниваем квадрат расстояния между центром окружности и заданной точкой
