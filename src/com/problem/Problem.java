@@ -1,4 +1,5 @@
 package com.problem;
+
 import com.bot.Point;
 
 import java.io.File;

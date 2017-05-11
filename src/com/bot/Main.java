@@ -1,4 +1,5 @@
 package com.bot;
+
 import com.problem.Problem;
 
 import javax.swing.*;

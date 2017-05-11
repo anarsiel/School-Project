@@ -35,7 +35,7 @@ public class Point extends JPanel{
 
     public void paint(Graphics g){
         g.setColor(DEFAULT_COLOR);
-        g.fillRect(0,0,10,10);
+        g.fillRect(0,0,3,3);
 
     }
 }
